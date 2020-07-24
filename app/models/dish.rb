@@ -5,6 +5,6 @@ class Dish <ApplicationRecord
   has_many :ingredients, through: :dish_ingredients
 
   def total_calories
-    require "pry"; binding.pry
+    ingredients.sum(:calories)
   end
 end

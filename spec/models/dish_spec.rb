@@ -18,7 +18,7 @@ RSpec.describe Dish, type: :model do
     dish_1 = ramsey.dishes.create(name: "Spagetti and Meatballs", description: "Lovely Spagetti and meatballs")
     DishIngredient.create(dish_id: dish_1.id, ingredient_id: ingredient1.id)
     DishIngredient.create(dish_id: dish_1.id, ingredient_id: ingredient2.id)
-
+    
     expect(dish_1.total_calories).to eq(505)
   end
 end
